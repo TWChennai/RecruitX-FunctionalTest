@@ -61,7 +61,7 @@ public class WebDriverBuilder {
     }
 
     public static void nullAndroidWebDriver() {
-        driver.quit();
+
         driver = null;
         capabilities = null;
     }

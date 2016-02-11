@@ -2,8 +2,6 @@ package steps;
 
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import webDriver.WebDriverBuilder;
 
 import java.net.MalformedURLException;
@@ -21,7 +19,8 @@ public class Hooks extends BaseSteps {
     }
 
     @After
-    public void tearDown(){
+    public void tearDown() {
+        driver.quit();
         WebDriverBuilder.nullAndroidWebDriver();
     }
 
