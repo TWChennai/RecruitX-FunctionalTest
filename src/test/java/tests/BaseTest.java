@@ -4,10 +4,8 @@ import org.apache.log4j.Logger;
 import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import pages.*;
+import pages.LoginPage;
 import webDriver.WebDriverBuilder;
-
-import java.util.concurrent.TimeUnit;
 
 /**
  * Created by Bharathan on 10/02/16.
@@ -32,9 +30,7 @@ public class BaseTest {
 //        driver.get("http://accountsdemo.herokuapp.com");
 ////        login("bharathk@thoughtworks.com", "ARUNmozhi");
         driver = WebDriverBuilder.getWebDriver();
-//        driver.get("http://accountsdemo.herokuapp.com");
-//        driver.manage().window().maximize();
-//        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
     }
 
     @After
