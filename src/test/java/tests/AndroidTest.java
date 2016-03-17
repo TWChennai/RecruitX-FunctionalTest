@@ -42,7 +42,7 @@ public class AndroidTest {
         System.out.println("@before started");
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability(MobileCapabilityType.DEVICE_NAME,"Android");
-        capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION,"5.0.X");
+        capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION,"4.4");
         capabilities.setCapability(MobileCapabilityType.APP,System.getProperty("user.dir")+"/apk/android-debug.apk");
         capabilities.setCapability(MobileCapabilityType.APP_PACKAGE,"com.ionicframework.starter");
         capabilities.setCapability(MobileCapabilityType.APP_ACTIVITY,".MainActivity");

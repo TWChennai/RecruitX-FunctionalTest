@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/recruitxAndroid.iml" filepath="$PROJECT_DIR$/recruitxAndroid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/thoughtworks.recruitx.iml" filepath="$PROJECT_DIR$/thoughtworks.recruitx.iml" />
     </modules>
   </component>
 </project>

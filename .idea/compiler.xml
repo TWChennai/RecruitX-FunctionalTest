@@ -23,11 +23,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="recruitxAndroid" />
+        <module name="thoughtworks.recruitx" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="recruitxAndroid" target="1.5" />
+      <module name="thoughtworks.recruitx" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
