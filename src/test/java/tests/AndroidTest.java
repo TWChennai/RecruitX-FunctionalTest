@@ -4,19 +4,22 @@ package tests; /**
  */
 //used to verify if URL is malformed
 
+import com.thoughtworks.selenium.Selenium;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.Set;
+import java.util.*;
 
 public class AndroidTest {
     public AppiumDriver<WebElement> driver;
@@ -52,18 +55,29 @@ public class AndroidTest {
 
     @Test
     public void addContact() throws Exception {
-        Thread.sleep(5000);
+//        WebDriverWait wait = new WebDriverWait(driver,60);
+//        wait.until(userNameTextBox().isDisplayed());
+        Thread.sleep(20000);
+        List<String> contextNameStringList = new ArrayList<String>();
         Set<String> contextNames = driver.getContextHandles();
         for (String contextName : contextNames) {
             System.out.println(contextName); //prints out something like NATIVE_APP \n WEBVIEW_1
         }
-        driver.context("WEBVIEW_com.thoughtworks.recruitx");
+        contextNameStringList.addAll(contextNames);
+        driver.context(contextNameStringList.get(1));
         System.out.println(driver.getPageSource());
         userNameTextBox().click();
         userNameTextBox().sendKeys("bharathk@thoughtworks.com");
         passWordTextBox().click();
         passWordTextBox().sendKeys("!abcd1234");
         submit().click();
+    }
+
+    @After
+    public void tearDown(){
+        System.out.println("@after started");
+        driver.closeApp();
+        driver.quit();
     }
 
 }

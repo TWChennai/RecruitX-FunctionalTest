@@ -1,5 +1,9 @@
 package webDriver;
 
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.remote.MobileCapabilityType;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -13,52 +17,36 @@ import java.net.URL;
  * Created on 01/02/16 8:13 PM
  */
 public class WebDriverBuilder {
-    static RemoteWebDriver driver;
-    static File classpathRoot; // path to Eclipse project
-    static File appDir; // path to <project folder>/Contact Manager
-    static File app; //path to <project folder>/Contact Manager/ContactManager.apk
+    static AppiumDriver<WebElement> driver;
     static DesiredCapabilities capabilities;
 
-    public static RemoteWebDriver getWebDriver() {
-        if (driver == null) {
-            classpathRoot = new File(System.getProperty("user.dir"));
-            appDir = new File(classpathRoot, "/ContactManager");
-            app = new File(appDir, "ContactManager.apk");
-            capabilities = new DesiredCapabilities();
-            capabilities.setCapability(CapabilityType.BROWSER_NAME, ""); //Name of mobile web browser to automate. Should be an empty string if automating an app instead.
-            capabilities.setCapability("platformName", "Android");
-            capabilities.setCapability(CapabilityType.VERSION, "4.4.4");
-            capabilities.setCapability("deviceName", "AVD_for_Galaxy_Nexus_Customised");
-            capabilities.setCapability("app", app.getAbsolutePath());
-            capabilities.setCapability("appPackage", "com.example.android.contactmanager");
-            capabilities.setCapability("appActivity", ".ContactManager");
-            try {
-                driver = new RemoteWebDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
-            } catch (MalformedURLException e) {
-                System.out.println("Error in driver instatiation");
-                e.printStackTrace();
-            }
+    public static AppiumDriver getAndroidWebDriver() {
+//        if ((driver == null) && (capabilities == null)) {
+//            capabilities = new DesiredCapabilities();
+//            capabilities.setCapability("deviceName", "AVD_for_Galaxy_Nexus_Customised");
+//            try {
+//                driver = new RemoteWebDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+//            } catch (MalformedURLException e) {
+//                System.out.println("Driver creation issues");
+//                e.printStackTrace();
+//            }
+//        }
+//        return driver;
+        capabilities = new DesiredCapabilities();
+        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME,"Android");
+        capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION,"4.4");
+        capabilities.setCapability(MobileCapabilityType.APP,System.getProperty("user.dir")+"/apk/android-debug.apk");
+        capabilities.setCapability(MobileCapabilityType.APP_PACKAGE,"com.ionicframework.starter");
+        capabilities.setCapability(MobileCapabilityType.APP_ACTIVITY,".MainActivity");
+        try {
+            return driver = new AndroidDriver<WebElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+            return null;
         }
-        return driver;
     }
 
-    public static RemoteWebDriver getAndroidWebDriver() {
-        if ((driver == null) && (capabilities == null)) {
-            capabilities = new DesiredCapabilities();
-            capabilities.setCapability("deviceName", "AVD_for_Galaxy_Nexus_Customised");
-            try {
-                driver = new RemoteWebDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
-            } catch (MalformedURLException e) {
-                System.out.println("Driver creation issues");
-                e.printStackTrace();
-            }
-        }
-        return driver;
-    }
 
-    public static void nullWebDriver() {
-        driver = null;
-    }
 
     public static void nullAndroidWebDriver() {
 

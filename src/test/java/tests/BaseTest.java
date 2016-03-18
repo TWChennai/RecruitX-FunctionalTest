@@ -1,8 +1,11 @@
 package tests;
 
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.android.AndroidDriver;
 import org.apache.log4j.Logger;
 import org.junit.After;
 import org.junit.Before;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import pages.LoginPage;
 import webDriver.WebDriverBuilder;
@@ -13,7 +16,7 @@ import webDriver.WebDriverBuilder;
  */
 public class BaseTest {
 
-    RemoteWebDriver driver;
+    AppiumDriver<WebElement> driver;
     LoginPage lgnPage;
     public Logger logger;
 
@@ -29,7 +32,7 @@ public class BaseTest {
 //        driver = new ChromeDriver();
 //        driver.get("http://accountsdemo.herokuapp.com");
 ////        login("bharathk@thoughtworks.com", "ARUNmozhi");
-        driver = WebDriverBuilder.getWebDriver();
+        driver = WebDriverBuilder.getAndroidWebDriver();
 
     }
 
@@ -38,6 +41,6 @@ public class BaseTest {
     public void tearDown() {
 //        driver.close();
         driver.quit();
-        WebDriverBuilder.nullWebDriver();
+        WebDriverBuilder.nullAndroidWebDriver();
     }
 }

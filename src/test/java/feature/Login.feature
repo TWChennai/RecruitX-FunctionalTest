@@ -1,7 +1,7 @@
 Feature: Login details
 
   Scenario: Verify valid login
-    When I provide username as abcd
-    When I provide password as 1234
+    When I provide username as ppanalist
+    When I provide password as P@ssw0rd
     When I submit login
-#    When I provide credential as <abcd>
+    Then I should see title as Hi panelist

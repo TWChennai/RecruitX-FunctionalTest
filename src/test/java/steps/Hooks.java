@@ -2,6 +2,8 @@ package steps;
 
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
+import io.appium.java_client.AppiumDriver;
+import org.openqa.selenium.WebElement;
 import webDriver.WebDriverBuilder;
 
 import java.net.MalformedURLException;
@@ -20,6 +22,8 @@ public class Hooks extends BaseSteps {
 
     @After
     public void tearDown() {
+        System.out.println("@after started");
+        driver.closeApp();
         driver.quit();
         WebDriverBuilder.nullAndroidWebDriver();
     }
