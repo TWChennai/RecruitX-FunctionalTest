@@ -4,11 +4,10 @@ import org.fest.assertions.Assertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import java.net.MalformedURLException;
-
 public class HomePage extends BasePage {
 
-    public HomePage() throws MalformedURLException {
+
+    public HomePage() throws Exception {
     }
 
     public WebElement homePageTitle() {

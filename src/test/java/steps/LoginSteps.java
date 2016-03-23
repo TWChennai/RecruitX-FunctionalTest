@@ -1,10 +1,7 @@
 package steps;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.When;
 import pages.LoginPage;
-
-import java.net.MalformedURLException;
 
 /**
  * Created by Bharathan on 11/02/16.
@@ -13,7 +10,7 @@ import java.net.MalformedURLException;
 public class LoginSteps extends BaseSteps {
 
     public LoginPage loginPage;
-    public LoginSteps() throws MalformedURLException, InterruptedException {
+    public LoginSteps() throws Exception {
         loginPage = new LoginPage();
     }
 

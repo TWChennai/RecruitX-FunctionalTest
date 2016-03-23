@@ -1,10 +1,7 @@
 package steps;
 
 import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
 import pages.HomePage;
-
-import java.net.MalformedURLException;
 
 /**
  * Created by Bharathan on 18/03/16.
@@ -13,7 +10,7 @@ import java.net.MalformedURLException;
 public class HomePageSteps extends BaseSteps{
 
     public HomePage homePage;
-    public HomePageSteps() throws MalformedURLException {
+    public HomePageSteps() throws Exception {
         homePage = new HomePage();
     }
 

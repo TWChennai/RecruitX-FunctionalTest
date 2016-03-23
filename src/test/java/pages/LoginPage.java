@@ -2,17 +2,10 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.net.MalformedURLException;
 
 public class LoginPage extends BasePage {
 
-    public LoginPage() throws MalformedURLException, InterruptedException {
-//        WebDriverWait wait = new WebDriverWait(driverPage, 30);
-//        wait.until(ExpectedConditions.elementToBeClickable(By
-//                .xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.webkit.WebView[1]/android.view.View[1]/android.widget.EditText[2]")));
+    public LoginPage() throws Exception {
         Thread.sleep(20000);
         driverPage.context("WEBVIEW_com.thoughtworks.recruitx");
     }
@@ -20,17 +13,14 @@ public class LoginPage extends BasePage {
 
 
     private WebElement userNameTextBox() {
-//        return driverPage.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.webkit.WebView[1]/android.view.View[1]/android.widget.EditText[2]"));
         return driverPage.findElement(By.name("username"));
     }
 
     private WebElement passWordTextBox() {
-//        return driverPage.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.webkit.WebView[1]/android.view.View[1]/android.widget.EditText[3]"));
         return driverPage.findElement(By.name("password"));
     }
 
     private WebElement submit() {
-//        return driverPage.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.webkit.WebView[1]/android.view.View[1]/android.widget.Button[1]"));
         return driverPage.findElement(By.cssSelector("input[value='Sign In']"));
     }
 

@@ -1,62 +1,60 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="tests.AndroidTest" time="0.441" errors="1" skipped="0">
+<testsuite tests="1" failures="0" name="tests.AndroidTest" time="8.378" errors="1" skipped="0">
   <properties>
-    <property name="idea.version" value="14.1.6"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
-    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib"/>
-    <property name="java.vm.version" value="25.60-b23"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib"/>
+    <property name="java.vm.version" value="25.51-b03"/>
     <property name="user.country.format" value="IN"/>
     <property name="gopherProxySet" value="false"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="/Users/saikrisv/git/RecruitX-FunctionalTest-1"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=":"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="file.encoding.pkg" value="sun.io"/>
-    <property name="idea.launcher.port" value="7533"/>
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value="unknown"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="/Users/Bharathan/Projects/recruitxAndroid"/>
-    <property name="java.runtime.version" value="1.8.0_60-b27"/>
+    <property name="user.dir" value="/Users/saikrisv/git/RecruitX-FunctionalTest-1"/>
+    <property name="java.runtime.version" value="1.8.0_51-b16"/>
     <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
-    <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/endorsed"/>
+    <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/endorsed"/>
     <property name="os.arch" value="x86_64"/>
-    <property name="java.io.tmpdir" value="/var/folders/f7/ygr0qwj11c13q5t8ckgsjz_m0000gp/T/"/>
+    <property name="java.io.tmpdir" value="/var/folders/wd/9s7s80fd66j88vf5119rwt300000gp/T/"/>
     <property name="line.separator" value="
 "/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="os.name" value="Mac OS X"/>
-    <property name="classworlds.conf" value="/Applications/IntelliJ IDEA 14 CE.app/Contents/plugins/maven/lib/maven3/bin/m2.conf"/>
+    <property name="classworlds.conf" value="/usr/local/Cellar/maven/3.3.9/libexec/bin/m2.conf"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.library.path" value="/Users/Bharathan/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.library.path" value="/Users/saikrisv/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="os.version" value="10.10.5"/>
+    <property name="os.version" value="10.11.3"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
-    <property name="user.home" value="/Users/Bharathan"/>
+    <property name="user.home" value="/Users/saikrisv"/>
     <property name="user.timezone" value="Asia/Kolkata"/>
     <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
     <property name="java.specification.version" value="1.8"/>
-    <property name="idea.launcher.bin.path" value="/Applications/IntelliJ IDEA 14 CE.app/Contents/bin"/>
     <property name="file.encoding" value="UTF-8"/>
-    <property name="user.name" value="Bharathan"/>
-    <property name="java.class.path" value="/Applications/IntelliJ IDEA 14 CE.app/Contents/plugins/maven/lib/maven3/boot/plexus-classworlds-2.4.jar:/Applications/IntelliJ IDEA 14 CE.app/Contents/lib/idea_rt.jar"/>
+    <property name="user.name" value="saikrisv"/>
+    <property name="java.class.path" value="/usr/local/Cellar/maven/3.3.9/libexec/boot/plexus-classworlds-2.5.2.jar"/>
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre"/>
-    <property name="sun.java.command" value="com.intellij.rt.execution.application.AppMain org.codehaus.classworlds.Launcher -Didea.version=14.1.6 install"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean install"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
     <property name="java.vm.info" value="mixed mode"/>
-    <property name="java.version" value="1.8.0_60"/>
-    <property name="java.ext.dirs" value="/Users/Bharathan/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
-    <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/classes"/>
+    <property name="java.version" value="1.8.0_51"/>
+    <property name="java.ext.dirs" value="/Users/saikrisv/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
+    <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/classes"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="maven.home" value="/Applications/IntelliJ IDEA 14 CE.app/Contents/plugins/maven/lib/maven3"/>
+    <property name="maven.home" value="/usr/local/Cellar/maven/3.3.9/libexec"/>
     <property name="file.separator" value="/"/>
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -65,19 +63,11 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="tests.AndroidTest" name="addContact" time="0.348">
-    <error message="Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
-Build info: version: &apos;2.39.0&apos;, revision: &apos;14fa800511cc5d66d426e08b0b2ab926c7ed7398&apos;, time: &apos;2013-12-16 13:18:38&apos;
-System info: host: &apos;INBharathan.local&apos;, ip: &apos;10.16.20.5&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.10.5&apos;, java.version: &apos;1.8.0_60&apos;
-Driver info: driver.version: RemoteWebDriver" type="org.openqa.selenium.remote.UnreachableBrowserException">org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
-Build info: version: &apos;2.39.0&apos;, revision: &apos;14fa800511cc5d66d426e08b0b2ab926c7ed7398&apos;, time: &apos;2013-12-16 13:18:38&apos;
-System info: host: &apos;INBharathan.local&apos;, ip: &apos;10.16.20.5&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.10.5&apos;, java.version: &apos;1.8.0_60&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:216)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:111)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:129)
-	at tests.AndroidTest.setUp(AndroidTest.java:87)
+  <testcase classname="tests.AndroidTest" name="addContact" time="8.378">
+    <error message="Index: 1, Size: 1" type="java.lang.IndexOutOfBoundsException">java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+	at java.util.ArrayList.rangeCheck(ArrayList.java:653)
+	at java.util.ArrayList.get(ArrayList.java:429)
+	at tests.AndroidTest.addContact(AndroidTest.java:63)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -85,7 +75,9 @@ Driver info: driver.version: RemoteWebDriver
 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
@@ -95,42 +87,167 @@ Driver info: driver.version: RemoteWebDriver
 	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
 	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
-	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
-	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
-Caused by: java.net.ConnectException: Connection refused
-	at java.net.PlainSocketImpl.socketConnect(Native Method)
-	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
-	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
-	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
-	at java.net.Socket.connect(Socket.java:589)
-	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:117)
-	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:177)
-	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
-	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:131)
-	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
-	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
-	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
-	at org.openqa.selenium.remote.HttpCommandExecutor.fallBackExecute(HttpCommandExecutor.java:319)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:298)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
-	... 33 more
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 </error>
     <system-out>@before started
+Starting Appium Server Android
+BootStrapPort56032
+[Appium] Welcome to Appium v1.5.0 (REV d1d1c56d7fd1d66a3de8822393258f3bf2658bd4)
+[Appium] Non-default server args:
+[Appium]   port: 56030
+[Appium]   bootstrapPort: 56032
+[Appium]   sessionOverride: true
+[Appium]   selendroidPort: 56033
+[Appium]   chromeDriverPort: 56031
+[Appium]   suppressAdbKillServer: true
+[Appium] Appium REST http interface listener started on 0.0.0.0:56030
+[HTTP] --&gt; GET /wd/hub/status 
+[MJSONWP] Calling AppiumDriver.getStatus() with args: []
+[MJSONWP] Responding to client with driver.getStatus() result: {&quot;build&quot;:{&quot;version&quot;:&quot;1.5.0&quot;,&quot;revision&quot;:&quot;d1d1c56d7fd1d66a3de8822393258f3bf2658bd4&quot;}}
+[HTTP] &lt;-- GET /wd/hub/status 200 19 ms - 121 
+[HTTP] --&gt; POST /wd/hub/session 
+[MJSONWP] Calling AppiumDriver.createSession() with args: [{&quot;app&quot;:&quot;/Users/saikrisv/git/RecruitX-FunctionalTest-1/apk/android-debug.apk&quot;,&quot;appPackage&quot;:&quot;com.thoughtworks.recruitx&quot;,&quot;appActivity&quot;:&quot;com.thoughtwo...
+[Appium] Creating new AndroidDriver session
+[Appium] Capabilities:
+[Appium]   app: &apos;/Users/saikrisv/git/RecruitX-FunctionalTest-1/apk/android-debug.apk&apos;
+[Appium]   appPackage: &apos;com.thoughtworks.recruitx&apos;
+[Appium]   appActivity: &apos;com.thoughtworks.recruitx.MainActivity&apos;
+[Appium]   platformName: &apos;Android&apos;
+[Appium]   deviceName: &apos;Android&apos;
+[Appium]   platformVersion: &apos;4.4&apos;
+[BaseDriver] Session created with session id: f287a4a1-5277-43bd-ac43-2d579a5b635f
+[debug] [AndroidDriver] Getting Java version
+[AndroidDriver] Java version is: 1.8.0_51
+[ADB] Checking whether adb is present
+[ADB] Using adb from /Users/saikrisv/Library/Android/sdk/platform-tools/adb
+[AndroidDriver] Retrieving device list
+[debug] [ADB] Trying to find a connected android device
+[debug] [ADB] Getting connected devices...
+[debug] [ADB] 2 device(s) connected
+[AndroidDriver] Using device: 192.168.56.101:5555
+[ADB] Checking whether adb is present
+[ADB] Using adb from /Users/saikrisv/Library/Android/sdk/platform-tools/adb
+[debug] [ADB] Setting device id to 192.168.56.101:5555
+[BaseDriver] Using local app &apos;/Users/saikrisv/git/RecruitX-FunctionalTest-1/apk/android-debug.apk&apos;
+[debug] [AndroidDriver] Checking whether app is actually present
+[AndroidDriver] Starting Android session
+[debug] [ADB] Running /Users/saikrisv/Library/Android/sdk/platform-tools/adb with args: [&quot;-P&quot;,5037,&quot;-s&quot;,&quot;192.168.56.101:5555&quot;,&quot;wait-for-device&quot;]
+[debug] [ADB] Getting connected devices...
+[debug] [ADB] 2 device(s) connected
+[debug] [ADB] Running /Users/saikrisv/Library/Android/sdk/platform-tools/adb with args: [&quot;-P&quot;,5037,&quot;-s&quot;,&quot;192.168.56.101:5555&quot;,&quot;shell&quot;,&quot;echo&quot;,&quot;ping&quot;]
+[debug] [Logcat] Starting logcat capture
+[debug] [AndroidDriver] Pushing settings apk to device...
+[debug] [ADB] Running /Users/saikrisv/Library/Android/sdk/platform-tools/adb with args: [&quot;-P&quot;,5037,&quot;-s&quot;,&quot;192.168.56.101:5555&quot;,&quot;install&quot;,&quot;/Users/saikrisv/git/appium_master/appium/node_modules/io.appium.settings/bin/settings_apk-debug.apk&quot;]
+[debug] [AndroidDriver] Pushing unlock helper app to device...
+[debug] [ADB] Running /Users/saikrisv/Library/Android/sdk/platform-tools/adb with args: [&quot;-P&quot;,5037,&quot;-s&quot;,&quot;192.168.56.101:5555&quot;,&quot;install&quot;,&quot;/Users/saikrisv/git/appium_master/appium/node_modules/appium-unlock/bin/unlock_apk-debug.apk&quot;]
+[ADB] Getting device platform version
+[debug] [ADB] Getting connected devices...
+[debug] [ADB] 2 device(s) connected
+[debug] [ADB] Running /Users/saikrisv/Library/Android/sdk/platform-tools/adb with args: [&quot;-P&quot;,5037,&quot;-s&quot;,&quot;192.168.56.101:5555&quot;,&quot;shell&quot;,&quot;getprop&quot;,&quot;ro.build.version.release&quot;]
+[debug] [ADB] Uninstalling com.thoughtworks.recruitx
+[debug] [ADB] Getting connected devices...
+[debug] [ADB] 2 device(s) connected
+[debug] [ADB] Running /Users/saikrisv/Library/Android/sdk/platform-tools/adb with args: [&quot;-P&quot;,5037,&quot;-s&quot;,&quot;192.168.56.101:5555&quot;,&quot;shell&quot;,&quot;am&quot;,&quot;force-stop&quot;,&quot;com.thoughtworks.recruitx&quot;]
+[debug] [ADB] Running /Users/saikrisv/Library/Android/sdk/platform-tools/adb with args: [&quot;-P&quot;,5037,&quot;-s&quot;,&quot;192.168.56.101:5555&quot;,&quot;uninstall&quot;,&quot;com.thoughtworks.recruitx&quot;]
+[ADB] App was uninstalled
+[AndroidDriver] Remote apk path is /data/local/tmp/42a05b97e5a6e0abbea09db24b1afbbe.apk
+[debug] [ADB] Getting connected devices...
+[debug] [ADB] 2 device(s) connected
+[debug] [ADB] Running /Users/saikrisv/Library/Android/sdk/platform-tools/adb with args: [&quot;-P&quot;,5037,&quot;-s&quot;,&quot;192.168.56.101:5555&quot;,&quot;shell&quot;,&quot;ls&quot;,&quot;/data/local/tmp/42a05b97e5a6e0abbea09db24b1afbbe.apk&quot;]
+[debug] [AndroidDriver] Checking if app is installed
+[debug] [ADB] Getting install status for com.thoughtworks.recruitx
+[debug] [ADB] Getting connected devices...
+[debug] [ADB] 2 device(s) connected
+[debug] [ADB] Running /Users/saikrisv/Library/Android/sdk/platform-tools/adb with args: [&quot;-P&quot;,5037,&quot;-s&quot;,&quot;192.168.56.101:5555&quot;,&quot;shell&quot;,&quot;getprop&quot;,&quot;ro.build.version.sdk&quot;]
+[debug] [ADB] Device API level: 21
+[debug] [ADB] Getting connected devices...
+[debug] [ADB] 2 device(s) connected
+[debug] [ADB] Running /Users/saikrisv/Library/Android/sdk/platform-tools/adb with args: [&quot;-P&quot;,5037,&quot;-s&quot;,&quot;192.168.56.101:5555&quot;,&quot;shell&quot;,&quot;pm&quot;,&quot;list&quot;,&quot;packages&quot;,&quot;-3&quot;,&quot;com.thoughtworks.recruitx&quot;]
+[debug] [ADB] App is  not installed
+[AndroidDriver] Apk is not yet installed
+[AndroidDriver] installing apk from remote
+[debug] [ADB] Getting connected devices...
+[debug] [ADB] 2 device(s) connected
+[debug] [ADB] Running /Users/saikrisv/Library/Android/sdk/platform-tools/adb with args: [&quot;-P&quot;,5037,&quot;-s&quot;,&quot;192.168.56.101:5555&quot;,&quot;shell&quot;,&quot;mkdir&quot;,&quot;-p&quot;,&quot;/data/local/tmp&quot;]
+[AndroidDriver] Clearing out any existing remote apks with the same hash
+[debug] [AndroidDriver] Removing any old apks
+[debug] [AndroidDriver] Except [&quot;42a05b97e5a6e0abbea09db24b1afbbe&quot;]
+[debug] [ADB] Getting connected devices...
+[debug] [ADB] 2 device(s) connected
+[debug] [ADB] Running /Users/saikrisv/Library/Android/sdk/platform-tools/adb with args: [&quot;-P&quot;,5037,&quot;-s&quot;,&quot;192.168.56.101:5555&quot;,&quot;shell&quot;,&quot;ls&quot;,&quot;/data/local/tmp/*.apk&quot;]
+[debug] [ADB] Uninstalling com.thoughtworks.recruitx
+[debug] [ADB] Getting connected devices...
+[debug] [ADB] 2 device(s) connected
+[debug] [ADB] Running /Users/saikrisv/Library/Android/sdk/platform-tools/adb with args: [&quot;-P&quot;,5037,&quot;-s&quot;,&quot;192.168.56.101:5555&quot;,&quot;shell&quot;,&quot;am&quot;,&quot;force-stop&quot;,&quot;com.thoughtworks.recruitx&quot;]
+[debug] [ADB] Running /Users/saikrisv/Library/Android/sdk/platform-tools/adb with args: [&quot;-P&quot;,5037,&quot;-s&quot;,&quot;192.168.56.101:5555&quot;,&quot;uninstall&quot;,&quot;com.thoughtworks.recruitx&quot;]
+[ADB] App was not uninstalled, maybe it wasn&apos;t on device?
+[debug] [ADB] Getting connected devices...
+[debug] [ADB] 2 device(s) connected
+[debug] [ADB] Running /Users/saikrisv/Library/Android/sdk/platform-tools/adb with args: [&quot;-P&quot;,5037,&quot;-s&quot;,&quot;192.168.56.101:5555&quot;,&quot;shell&quot;,&quot;pm&quot;,&quot;install&quot;,&quot;-r&quot;,&quot;/data/local/tmp/42a05b97e5a6e0abbea09db24b1afbbe.apk&quot;]
+[debug] [AndroidDriver] Extracting strings from apk /Users/saikrisv/git/RecruitX-FunctionalTest-1/apk/android-debug.apk null /var/folders/wd/9s7s80fd66j88vf5119rwt300000gp/T/com.thoughtworks.recruitx
+[debug] [ADB] Extracting strings for language: default
+[debug] [ADB] Getting connected devices...
+[debug] [ADB] 2 device(s) connected
+[debug] [ADB] Running /Users/saikrisv/Library/Android/sdk/platform-tools/adb with args: [&quot;-P&quot;,5037,&quot;-s&quot;,&quot;192.168.56.101:5555&quot;,&quot;shell&quot;,&quot;getprop&quot;,&quot;persist.sys.language&quot;]
+[debug] [ADB] Current device property &apos;persist.sys.language&apos;: en
+[debug] [ADB] No strings.xml for language &apos;en&apos;, getting default strings.xml
+[debug] [ADB] Reading strings from converted strings.json
+[debug] [ADB] Running /Users/saikrisv/Library/Android/sdk/platform-tools/adb with args: [&quot;-P&quot;,5037,&quot;-s&quot;,&quot;192.168.56.101:5555&quot;,&quot;push&quot;,&quot;/var/folders/wd/9s7s80fd66j88vf5119rwt300000gp/T/com.thoughtworks.recruitx/strings.json&quot;,&quot;/data/local/tmp&quot;]
+[debug] [AndroidBootstrap] Watching for bootstrap disconnect
+[debug] [ADB] Forwarding system: 56032 to device: 4724
+[debug] [ADB] Running /Users/saikrisv/Library/Android/sdk/platform-tools/adb with args: [&quot;-P&quot;,5037,&quot;-s&quot;,&quot;192.168.56.101:5555&quot;,&quot;forward&quot;,&quot;tcp:56032&quot;,&quot;tcp:4724&quot;]
+[debug] [UiAutomator] Starting UiAutomator
+[debug] [UiAutomator] Moving to state &apos;starting&apos;
+[debug] [UiAutomator] Parsing uiautomator jar
+[debug] [UiAutomator] Found jar name: &apos;AppiumBootstrap.jar&apos;
+[debug] [ADB] Running /Users/saikrisv/Library/Android/sdk/platform-tools/adb with args: [&quot;-P&quot;,5037,&quot;-s&quot;,&quot;192.168.56.101:5555&quot;,&quot;push&quot;,&quot;/Users/saikrisv/git/appium_master/appium/node_modules/appium-android-bootstrap/bootstrap/bin/AppiumBootstrap.jar&quot;,&quot;/data/local/tmp/&quot;]
+[debug] [ADB] Attempting to kill all uiautomator processes
+[debug] [ADB] Getting all processes with uiautomator
+[debug] [ADB] Getting connected devices...
+[debug] [ADB] 2 device(s) connected
+[debug] [ADB] Running /Users/saikrisv/Library/Android/sdk/platform-tools/adb with args: [&quot;-P&quot;,5037,&quot;-s&quot;,&quot;192.168.56.101:5555&quot;,&quot;shell&quot;,&quot;ps&quot;,&quot;uiautomator&quot;]
+[ADB] No uiautomator process found to kill, continuing...
+[debug] [UiAutomator] Starting UIAutomator
+[debug] [ADB] Creating ADB subprocess with args: -P, 5037, -s, 192.168.56.101:5555, shell, uiautomator, runtest, AppiumBootstrap.jar, -c, io.appium.android.bootstrap.Bootstrap, -e, pkg, com.thoughtworks.recruitx, -e, disableAndroidWatchers, false, -e, acceptSslCerts, false
+[debug] [UiAutomator] Moving to state &apos;online&apos;
+[AndroidBootstrap] Android bootstrap socket is now connected
+[debug] [ADB] Getting connected devices...
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Client connected
+[debug] [ADB] 2 device(s) connected
+[debug] [ADB] Running /Users/saikrisv/Library/Android/sdk/platform-tools/adb with args: [&quot;-P&quot;,5037,&quot;-s&quot;,&quot;192.168.56.101:5555&quot;,&quot;shell&quot;,&quot;dumpsys&quot;,&quot;window&quot;]
+[AndroidDriver] Screen already unlocked, doing nothing
+[debug] [ADB] Device API level: 21
+[debug] [ADB] Getting connected devices...
+[debug] [ADB] 2 device(s) connected
+[debug] [ADB] Running /Users/saikrisv/Library/Android/sdk/platform-tools/adb with args: [&quot;-P&quot;,5037,&quot;-s&quot;,&quot;192.168.56.101:5555&quot;,&quot;shell&quot;,&quot;am&quot;,&quot;start&quot;,&quot;-n&quot;,&quot;com.thoughtworks.recruitx/com.thoughtworks.recruitx.MainActivity&quot;,&quot;-S&quot;,&quot;-a&quot;,&quot;android.intent.action.MAIN&quot;,&quot;-c&quot;,&quot;android.intent.category.LAUNCHER&quot;,&quot;-f&quot;,&quot;0x10200000&quot;]
+[Appium] New AndroidDriver session created successfully, session f287a4a1-5277-43bd-ac43-2d579a5b635f added to master session list
+[MJSONWP] Responding to client with driver.createSession() result: {&quot;platform&quot;:&quot;LINUX&quot;,&quot;webStorageEnabled&quot;:false,&quot;takesScreenshot&quot;:true,&quot;javascriptEnabled&quot;:true,&quot;databaseEnabled&quot;:false,&quot;networkConnectionEnabled&quot;:tr...
+[HTTP] &lt;-- POST /wd/hub/session 200 6324 ms - 779 
+[HTTP] --&gt; GET /wd/hub/session/f287a4a1-5277-43bd-ac43-2d579a5b635f/contexts 
+[MJSONWP] Calling AppiumDriver.getContexts() with args: [&quot;f287a4a1-5277-43bd-ac43-2d579a5b635f&quot;]
+[debug] [AndroidDriver] Getting a list of available webviews
+[debug] [ADB] Getting connected devices...
+[debug] [ADB] 2 device(s) connected
+[debug] [ADB] Running /Users/saikrisv/Library/Android/sdk/platform-tools/adb with args: [&quot;-P&quot;,5037,&quot;-s&quot;,&quot;192.168.56.101:5555&quot;,&quot;shell&quot;,&quot;cat&quot;,&quot;/proc/net/unix&quot;]
+[debug] [AndroidDriver] Found webviews: []
+[debug] [AndroidDriver] Available contexts: [&quot;NATIVE_APP&quot;]
+[MJSONWP] Responding to client with driver.getContexts() result: [&quot;NATIVE_APP&quot;]
+[HTTP] &lt;-- GET /wd/hub/session/f287a4a1-5277-43bd-ac43-2d579a5b635f/contexts 200 46 ms - 86 
+NATIVE_APP
+@after started
 </system-out>
-    <system-err>log4j:WARN No appenders could be found for logger (org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager).
+    <system-err>log4j:WARN No appenders could be found for logger (org.apache.http.client.protocol.RequestAddCookies).
 log4j:WARN Please initialize the log4j system properly.
 log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
 </system-err>
