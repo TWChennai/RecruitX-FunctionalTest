@@ -15,5 +15,5 @@ import java.net.MalformedURLException;
  * Created on 11/02/16 7:41 PM
  */
 public class BaseSteps {
-    public AppiumDriver driver;
+    public static AppiumDriver<WebElement> driverSteps;
 }

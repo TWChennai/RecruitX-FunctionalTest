@@ -4,6 +4,8 @@ import cucumber.api.PendingException;
 import cucumber.api.java.en.When;
 import pages.LoginPage;
 
+import java.net.MalformedURLException;
+
 /**
  * Created by Bharathan on 11/02/16.
  * Created on 11/02/16 7:41 PM
@@ -11,7 +13,7 @@ import pages.LoginPage;
 public class LoginSteps extends BaseSteps {
 
     public LoginPage loginPage;
-    public LoginSteps() {
+    public LoginSteps() throws MalformedURLException, InterruptedException {
         loginPage = new LoginPage();
     }
 
@@ -30,5 +32,18 @@ public class LoginSteps extends BaseSteps {
     public void I_submit_login() throws Throwable {
         // Express the Regexp above with the code you wish you had
         loginPage.clickSubmit();
+        Thread.sleep(40000);
+    }
+
+    @When("^I provide (.+) as experience$")
+    public void I_submit_the_experience_as_experience(String experienceValue) throws Throwable {
+        // Express the Regexp above with the code you wish you had
+        loginPage.setExperience(experienceValue);
+    }
+
+    @When("^I submit experience$")
+    public void I_submit_experience() throws Throwable {
+        // Express the Regexp above with the code you wish you had
+        loginPage.submitExperience();
     }
 }

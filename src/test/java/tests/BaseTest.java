@@ -10,6 +10,8 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import pages.LoginPage;
 import webDriver.WebDriverBuilder;
 
+import java.net.MalformedURLException;
+
 /**
  * Created by Bharathan on 10/02/16.
  * Created on 10/02/16 1:04 PM
@@ -20,17 +22,17 @@ public class BaseTest {
     LoginPage lgnPage;
     public Logger logger;
 
-    public BaseTest() {
+    public BaseTest() throws MalformedURLException, InterruptedException {
         lgnPage = new LoginPage();
         logger = Logger.getLogger(BaseTest.class);
     }
 
     @Before
-    public void setUp() {
-//        System.setProperty("webdriver.chrome.driver",
+    public void setUp() throws MalformedURLException {
+//        System.setProperty("webdriver.chrome.driverBuilder",
 //                "/Users/Bharathan/Selenium/Driver/chromedriver");
-//        driver = new ChromeDriver();
-//        driver.get("http://accountsdemo.herokuapp.com");
+//        driverBuilder = new ChromeDriver();
+//        driverBuilder.get("http://accountsdemo.herokuapp.com");
 ////        login("bharathk@thoughtworks.com", "ARUNmozhi");
         driver = WebDriverBuilder.getAndroidWebDriver();
 
@@ -39,7 +41,7 @@ public class BaseTest {
     @After
 
     public void tearDown() {
-//        driver.close();
+//        driverBuilder.close();
         driver.quit();
         WebDriverBuilder.nullAndroidWebDriver();
     }

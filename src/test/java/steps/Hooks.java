@@ -2,11 +2,9 @@ package steps;
 
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
-import io.appium.java_client.AppiumDriver;
-import org.openqa.selenium.WebElement;
 import webDriver.WebDriverBuilder;
 
-import java.net.MalformedURLException;
+import java.io.IOException;
 
 /**
  * Created by Bharathan on 11/02/16.
@@ -14,18 +12,25 @@ import java.net.MalformedURLException;
  */
 public class Hooks extends BaseSteps {
 
+    String apkPath = System.getProperty("user.dir")+"/apk/android-debug.apk";
+    String launchApp = "adb install "+apkPath;
+    Process appium;
     @Before
-    public void setUp() throws MalformedURLException {
+    public void setUp() throws IOException {
+        appium = Runtime.getRuntime().exec("/usr/local/bin/appium");
+        appium = Runtime.getRuntime().exec("emulator -avd AVD_for_Galaxy_Nexus_Customised");
+        appium = Runtime.getRuntime().exec(launchApp);
         System.out.println("@before started");
-        driver = WebDriverBuilder.getAndroidWebDriver();
+        driverSteps = WebDriverBuilder.getAndroidWebDriver();
     }
 
     @After
     public void tearDown() {
         System.out.println("@after started");
-        driver.closeApp();
-        driver.quit();
+        driverSteps.closeApp();
+        driverSteps.quit();
         WebDriverBuilder.nullAndroidWebDriver();
+//        appium.destroy();
     }
 
 }

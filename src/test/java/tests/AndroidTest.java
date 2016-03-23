@@ -4,10 +4,8 @@ package tests; /**
  */
 //used to verify if URL is malformed
 
-import com.thoughtworks.selenium.Selenium;
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.remote.MobileCapabilityType;
+import org.fest.assertions.Assertions;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -15,14 +13,19 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import webDriver.WebDriverBuilder;
 
 import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 
 public class AndroidTest {
     public AppiumDriver<WebElement> driver;
+    public DesiredCapabilities capabilities;
 
     private WebElement userNameTextBox() {
         return driver.findElement(By.xpath(".//*[@name='username']"));
@@ -36,6 +39,14 @@ public class AndroidTest {
         return driver.findElement(By.xpath(".//*[@value='Sign In']"));
     }
 
+    private WebElement homePageTitle() {
+        return driver.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.view.View[1]"));
+    }
+
+    private WebElement enterExperience() {
+        return driver.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.webkit.WebView[1]/android.view.View[1]/android.view.View[8]/android.widget.EditText[1]"));
+    }
+
     public AndroidTest() {
         PageFactory.initElements(driver, this);
     }
@@ -43,21 +54,23 @@ public class AndroidTest {
     @Before
     public void setUp() throws MalformedURLException {
         System.out.println("@before started");
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME,"Android");
-        capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION,"4.4");
-        capabilities.setCapability(MobileCapabilityType.APP,System.getProperty("user.dir")+"/apk/android-debug.apk");
-        capabilities.setCapability(MobileCapabilityType.APP_PACKAGE,"com.ionicframework.starter");
-        capabilities.setCapability(MobileCapabilityType.APP_ACTIVITY,".MainActivity");
-        driver = new AndroidDriver<WebElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
-
+//        capabilities = new DesiredCapabilities();
+//        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Android");
+//        capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "4.4");
+//        capabilities.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir") + "/apk/android-debug.apk");
+//        capabilities.setCapability(MobileCapabilityType.APP_PACKAGE, "com.ionicframework.starter");
+//        capabilities.setCapability(MobileCapabilityType.APP_ACTIVITY, ".MainActivity");
+//        driverBuilder = new AndroidDriver<WebElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+        driver = WebDriverBuilder.getAndroidWebDriver();
     }
 
     @Test
     public void addContact() throws Exception {
-//        WebDriverWait wait = new WebDriverWait(driver,60);
+//        WebDriverWait wait = new WebDriverWait(driverBuilder,60);
 //        wait.until(userNameTextBox().isDisplayed());
-        Thread.sleep(20000);
+//        WebDriverWait wait = new WebDriverWait(driver, 30);
+//        wait.until(ExpectedConditions.elementToBeClickable(By
+//                .xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.webkit.WebView[1]/android.view.View[1]/android.widget.EditText[2]")));
         List<String> contextNameStringList = new ArrayList<String>();
         Set<String> contextNames = driver.getContextHandles();
         for (String contextName : contextNames) {
@@ -65,19 +78,23 @@ public class AndroidTest {
         }
         contextNameStringList.addAll(contextNames);
         driver.context(contextNameStringList.get(1));
-        System.out.println(driver.getPageSource());
         userNameTextBox().click();
-        userNameTextBox().sendKeys("bharathk@thoughtworks.com");
+        userNameTextBox().sendKeys("ppanelist");
         passWordTextBox().click();
-        passWordTextBox().sendKeys("!abcd1234");
+        passWordTextBox().sendKeys("P@ssw0rd");
         submit().click();
-    }
+//        enterExperience().click();
+//        enterExperience().sendKeys("1");
+//        wait.until(ExpectedConditions.elementToBeClickable(homePageTitle()));
+//        Assertions.assertThat(homePageTitle().getText().contains("Hi panelist"));
+}
 
     @After
-    public void tearDown(){
+    public void tearDown() {
         System.out.println("@after started");
-        driver.closeApp();
-        driver.quit();
+//        driverBuilder.closeApp();
+//        driverBuilder.quit();
+        WebDriverBuilder.nullAndroidWebDriver();
     }
 
 }
