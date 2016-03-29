@@ -1,0 +1,12 @@
+{
+  "name": "recruitx-functional-tests",
+  "version": "0.0.1",
+  "description": "Functional Tests for RecruitX",
+  "scripts": {
+    "test": ""
+  },
+  "dependencies": {
+    "appium": "^1.5.0",
+    "wd": "^0.4.0"
+  }
+}
