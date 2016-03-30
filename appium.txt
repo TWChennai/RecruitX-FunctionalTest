@@ -1,0 +1,4 @@
+[caps]
+platformName = "android"
+app = "/Users/gayathri/Downloads/android-debug.apk"
+deviceName = "Android Emulator"
