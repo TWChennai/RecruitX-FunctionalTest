@@ -1,8 +1,9 @@
-export default function () {
-  this.Given(/^I open the recruitx app and land on login page$/, function (done) {
-    const that = this;
-    this.LoginPage.waitForLoginPageToLoad().then(function(){
-      that.LoginPage.title().should.eventually.eql('RecruitX').notify(done);
-    });
+import cucumberAsync from '../support/utils.js';
+import steps from 'artstep'
+
+export default steps()
+  .Given(/^I open the recruitx app and land on login page$/, async function() {
+    await this.LoginPage.waitForLoginPageToLoad();
+    const title = await this.LoginPage.title();
+    title.should.equal('RecruitX');
   });
-}
