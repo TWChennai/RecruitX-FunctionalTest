@@ -5,12 +5,12 @@ RecruitX hybrid app functional tests Framework.
 ###Setup Automation Framework
 - Install node v5.9.1
 - Install Appium 1.3.7 GUI server https://github.com/appium/appium-dot-app
-- npm Install
+- `npm Install`
 
 ###Steps to run Android tests
 - Open Appium GUI and Launch server (make sure Appium Doctor runs fine before launching)
 - Setup Emulator with Android 4.4 and launch
-- VERSION='4.4' npm run android
+- `VERSION='4.4' npm run android`
 
 ###Help Links
 - https://github.com/appium/appium/blob/master/docs/en/advanced-concepts/hybrid.md
