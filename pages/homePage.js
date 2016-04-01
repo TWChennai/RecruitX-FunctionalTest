@@ -1,16 +1,17 @@
-export default class HomePage {
+import BasePage from './basePage';
+
+export default class HomePage extends BasePage {
   constructor(driver, asserters) {
-    this.driver = driver;
+    super(driver);
     this.asserters = asserters;
   }
 
   waitForHomePageToLoad() {
-    return this.driver.context('WEBVIEW_com.thoughtworks.recruitx')
-                      .waitForElementByCssSelector('.ion-log-out', this.asserters.isDisplayed, 5000, 1000);
+    return this.switchToWebViewDriver()
+               .waitForElementByCssSelector('.ion-log-out', this.asserters.isDisplayed, 5000, 1000);
   }
 
   title() {
-    return this.driver.context('WEBVIEW_com.thoughtworks.recruitx')
-                      .elementByCss('.title').text();
+    return this.switchToWebViewDriver().elementByCss('.title').text();
   }
 }
