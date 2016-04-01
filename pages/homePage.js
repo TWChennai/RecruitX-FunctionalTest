@@ -8,7 +8,7 @@ export default class HomePage extends BasePage {
 
   waitForHomePageToLoad() {
     return this.switchToWebViewDriver()
-               .waitForElementByCssSelector('.ion-log-out', this.asserters.isDisplayed, 5000, 1000);
+               .waitForElementByCssSelector('.ion-log-out', this.asserters.isDisplayed, 10000, 1000);
   }
 
   title() {
