@@ -1,15 +1,12 @@
 export default class LoginPage {
-  constructor(driver) {
+  constructor(driver, asserters) {
     this.driver = driver;
-  }
-
-  waitForLoginPageToLoad() {
-    return this.driver.waitForElementByClassName('android.webkit.WebView', 60000, 10000);
+    this.asserters = asserters;
   }
 
   title() {
     return this.driver.context('WEBVIEW_com.thoughtworks.recruitx')
-                      .waitForElementByCssSelector('.okta-form-title', 60000, 10000).text();
+                      .waitForElementByCssSelector('.okta-form-title', this.asserters.isDisplayed, 60000, 10000).text();
   }
 
   enterUsername(username) {

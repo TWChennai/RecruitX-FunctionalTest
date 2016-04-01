@@ -14,7 +14,7 @@ export default function () {
     this.driver = wd.promiseChainRemote({ host: 'localhost', port: 4723 });
     this.asserters = wd.asserters;
     this.steps = steps();
-    this.LoginPage = new LoginPage(this.driver);
+    this.LoginPage = new LoginPage(this.driver, this.asserters);
     this.HomePage = new HomePage(this.driver, this.asserters);
   };
 }
