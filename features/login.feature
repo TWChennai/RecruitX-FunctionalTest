@@ -20,4 +20,4 @@ Then I should be on home page with title Hi recruiter!
 Scenario: Verify invalid credentials throw error message.
 Given I open the recruitx app and land on login page
 When I signin with credentials ppanelist and password
-Then I should be on login page with an error message as Authentication
+Then I should be on login page with an error message as Authentication failed
