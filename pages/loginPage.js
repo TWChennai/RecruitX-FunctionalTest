@@ -6,9 +6,22 @@ export default class LoginPage extends BasePage {
     this.asserters = asserters;
   }
 
+  waitForLoginPageToLoad() {
+    return this.switchToWebViewDriver()
+               .waitForElementByCssSelector('.okta-form-title',
+                  this.asserters.isDisplayed, 60000, 1000);
+  }
+
   title() {
     return this.switchToWebViewDriver()
-               .waitForElementByCssSelector('.okta-form-title', this.asserters.isDisplayed, 60000, 10000).text();
+               .waitForElementByCssSelector('.okta-form-title',
+                  this.asserters.isDisplayed, 60000, 10000).text();
+  }
+
+  getErrorMessage() {
+    return this.switchToWebViewDriver()
+                                .waitForElementByCssSelector('.o-form-error-container p',
+                                  this.asserters.isDisplayed, 100000, 10000).text();
   }
 
   enterUsername(username) {
