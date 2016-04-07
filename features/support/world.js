@@ -3,6 +3,8 @@ import chai from 'chai';
 import chaiAsPromised from 'chai-as-promised';
 import LoginPage from '../../pages/loginPage.js';
 import HomePage from '../../pages/homePage.js';
+import AddCandidatePage from '../../pages/addCandidatePage.js';
+import ScheduleInterviewPage from '../../pages/scheduleInterviewPage.js';
 import steps from 'artstep';
 
 export default function () {
@@ -16,5 +18,7 @@ export default function () {
     this.steps = steps();
     this.LoginPage = new LoginPage(this.driver, this.asserters);
     this.HomePage = new HomePage(this.driver, this.asserters);
+    this.AddCandidatePage = new AddCandidatePage(this.driver, this.asserters);
+    this.ScheduleInterviewPage = new ScheduleInterviewPage(this.driver, this.asserters);
   };
 }

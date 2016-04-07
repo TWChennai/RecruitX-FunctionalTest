@@ -6,4 +6,8 @@ export default class BasePage {
   switchToWebViewDriver() {
     return this.driver.context('WEBVIEW_com.thoughtworks.recruitx');
   }
+
+  getTitle() {
+    return this.switchToWebViewDriver().elementByCss('div[nav-bar=\'active\'] .title').text();
+  }
 }

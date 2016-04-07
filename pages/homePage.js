@@ -12,7 +12,7 @@ export default class HomePage extends BasePage {
                   this.asserters.isDisplayed, 20000, 1000);
   }
 
-  title() {
-    return this.switchToWebViewDriver().elementByCss('.title').text();
+  clickAddCandidate() {
+    return this.switchToWebViewDriver().elementByCssSelector('button.ion-plus-round').click();
   }
 }

@@ -20,7 +20,7 @@ export default steps()
 
   .Then('I should be on home page with title $expectedTitle', async function(expectedTitle) {
     await this.HomePage.waitForHomePageToLoad();
-    const actualTitle = await this.HomePage.title();
+    const actualTitle = await this.HomePage.getTitle();
     actualTitle.should.equal(expectedTitle);
   })
 
