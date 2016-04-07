@@ -16,7 +16,7 @@ RecruitX hybrid app functional tests Framework.
 ###Steps to run Android tests
 - Open Appium GUI and Launch server (make sure Appium Doctor runs fine before launching)
 - Setup Emulator with Android 4.4 and launch
-- `VERSION='4.4' npm run android`
+- `VERSION='4.4' ENV='QA' npm run android`
 - `npm run test-with-report` will generate html report under reports folder.
 
 ###Help Links
