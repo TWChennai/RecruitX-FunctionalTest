@@ -1,6 +1,6 @@
 Feature: As a recruiter, I want to create candidates so that panelists can sign up
 
-Scenario: Verify recruiter is able to successfully create a dev candidate.
+Scenario: Verify recruiter is able to successfully create a dev candidate
   Given I open the recruitx app and land on login page
   When I signin with credentials rrecruitx and P@ssw0rd
   Then I should be on home page with title Hi recruiter!
