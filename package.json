@@ -6,8 +6,6 @@
     "test": "babel-node ./node_modules/.bin/cucumberjs --format json:./reports/cucumber_report.json",
     "android": "PLATFORM='android' npm run test",
     "report": "babel-node ./utils/report.js",
-    "precreate-report": "rm -rf ./reports && mkdir ./reports",
-    "create-report": "npm run --silent report",
     "pretest-with-report": "rm -rf ./reports && mkdir ./reports",
     "test-with-report": "npm run --silent android; npm run --silent report"
   },
