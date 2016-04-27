@@ -13,12 +13,13 @@ export default steps()
   })
 
   .When(/^I enter the following candidate details$/, async function(table) {
-    var [{FirstName: firstName, LastName: lastName, Role: role, Experience: experience, Skills: skills}] = table.hashes();
+    const [{ FirstName: firstName, LastName: lastName, Role: role,
+      Experience: experience, Skills: skills }] = table.hashes();
     await this.AddCandidatePage.enterFirstName(firstName);
     await this.AddCandidatePage.enterLastName(lastName);
     await this.AddCandidatePage.selectRole(role);
     await this.AddCandidatePage.enterExperience(experience);
-    await this.AddCandidatePage.selectSkills(skills.split(', '))
+    await this.AddCandidatePage.selectSkills(skills.split(', '));
   })
 
   .When(/^I click the next button$/, async function() {

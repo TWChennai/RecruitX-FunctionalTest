@@ -8,7 +8,9 @@ export default class ScheduleInterviewPage extends BasePage {
 
   waitToLoad() {
     return this.switchToWebViewDriver()
-               .waitForElementByCss('ion-view div div button[ng-click=\'postCandidate()\']', this.asserters.isDisplayed, 10000, 1000);
+            .waitForElementByCss(
+              'ion-view div div button[ng-click=\'postCandidate()\']',
+              this.asserters.isDisplayed, 20000, 1000);
   }
 
   getInterviewRounds() {
