@@ -25,28 +25,39 @@ export default class ScheduleInterviewPage extends BasePage {
     return Promise.all(text_promises);
   }
 
-  scheduleInterview(element){
+  scheduleInterview(element, intervalInDays, amPm, hours, minutes){
     var driver = this.switchToNativeAppDriver();
-
     function clickOk(){
       return driver.elementById('android:id/button1').click();
     }
 
     function enterDate() {
-      var promises = [driver.elementById('android:id/month').type('May'),
-      driver.elementById('android:id/day').type('30')];
-      return Promise.all(promises)
+      var interviewDate = new Date();
+      interviewDate.setDate(interviewDate.getDate() + parseInt(intervalInDays));
+      var locale = "en-us";
+      var month = interviewDate.toLocaleString(locale, { month: "short" });
+      return driver.elementById('android:id/month').setText(month)
       .then(function(){
-        return driver.elementById('android:id/year').type('2017');
+        return driver.elementById('android:id/day').type(interviewDate.getDate());
+      })
+      .then(function(){
+        return driver.elementById('android:id/year').type(interviewDate.getFullYear());
       })
       .then(clickOk);
     }
 
     function enterTime(){
-      var promises = [driver.elementById('android:id/amPm').click(),
-      driver.elementById('android:id/hour').type('12'),
-      driver.elementById('android:id/minute').setText('12')];
+      var promises = [driver.elementById('android:id/hour').type(hours),
+      driver.elementById('android:id/minute').setText(minutes)];
       return Promise.all(promises)
+      .then(function(){
+        return driver.elementById('android:id/amPm').text();
+      })
+      .then(function(text){
+        if (text !== amPm) {
+          return driver.elementById('android:id/amPm').click();
+        }
+      })
       .then(clickOk);
     }
 

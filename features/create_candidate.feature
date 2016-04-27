@@ -12,5 +12,5 @@ Scenario: Verify recruiter is able to successfully create a dev candidate
   When I click the next button
   Then I should be on Schedule Interview page
   When I schedule the following rounds
-    | Interview Rounds |
-    | Coding           |
+    | InterviewRound | IntervalInDays | Hours | Minutes | amPm |
+    | Coding         | 12             | 07    | 00      | AM   |
