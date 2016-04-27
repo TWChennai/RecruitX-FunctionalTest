@@ -15,4 +15,9 @@ export default class HomePage extends BasePage {
   clickAddCandidate() {
     return this.switchToWebViewDriver().elementByCssSelector('button.ion-plus-round').click();
   }
+
+  clickSignUp() {
+    return this.switchToWebViewDriver().elementByCssSelector(
+      'button[ng-click=\'signingUp($event, item)\']:not(.button-pseudo-disabled)').click();
+  }
 }

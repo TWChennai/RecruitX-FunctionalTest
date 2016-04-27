@@ -36,9 +36,9 @@ export default class LoginPage extends BasePage {
     return this.switchToWebViewDriver().elementByCss('input[value=\'Sign In\']').click();
   }
 
-  enterExperience() {
+  enterExperience(experience) {
     return this.switchToWebViewDriver().waitForElementByCssSelector('.ng-pristine', 3000, 1000)
-               .type('2');
+               .type(experience);
   }
 
   clickDoneOnExperience() {
