@@ -6,6 +6,12 @@ export default steps()
     await this.HomePage.clickAddCandidate();
   })
 
+  .When(/^I schedule the following rounds$/, async function(table) {
+    var elements = await this.ScheduleInterviewPage.getInterviewRounds();
+    var contents = await this.ScheduleInterviewPage.resolveTextContent(elements);
+    await this.ScheduleInterviewPage.scheduleInterview(elements[0]);
+  })
+
   .When(/^I enter the following candidate details$/, async function(table) {
     var [{FirstName: firstName, LastName: lastName, Role: role, Experience: experience, Skills: skills}] = table.hashes();
     await this.AddCandidatePage.enterFirstName(firstName);
