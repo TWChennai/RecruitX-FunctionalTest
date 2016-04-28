@@ -20,4 +20,16 @@ export default class HomePage extends BasePage {
     return this.switchToWebViewDriver().elementByCssSelector(
       'button[ng-click=\'signingUp($event, item)\']:not(.button-pseudo-disabled)').click();
   }
+
+  async clickConfirm() {
+    const buttons = await this.switchToWebViewDriver().
+    waitForElementsByCssSelector('.button.ng-binding.button-positive');
+    return buttons[1].click();
+  }
+
+  getConfirmationMessage() {
+    return this.switchToWebViewDriver().
+    waitForElementByCssSelector('.popup-body',
+                  this.asserters.isDisplayed, 20000, 1000).text();
+  }
 }
