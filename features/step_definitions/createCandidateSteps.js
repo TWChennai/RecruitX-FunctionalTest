@@ -7,7 +7,7 @@ export default steps()
   })
 
   .When(/^I schedule the following rounds$/, async function(table) {
-    var [{InterviewRound: interviewRound, IntervalInDays: intervalInDays, amPm: amPm, Hours: hours, Minutes: minutes}] = table.hashes();
+    var [{ InterviewRound: interviewRound, IntervalInDays: intervalInDays, amPm: amPm, Hours: hours, Minutes: minutes }] = table.hashes();
 
     var elements = await this.ScheduleInterviewPage.getInterviewRounds();
     var contents = await this.ScheduleInterviewPage.resolveTextContent(elements);

@@ -19,6 +19,9 @@ RecruitX hybrid app functional tests Framework.
 - `VERSION='4.4' ENV='QA' npm run android`
 - `npm run test-with-report` will generate html report under reports folder.
 
+###Precommit guidelines
+- Run `node_modules/.bin/eslint --fix .`
+
 ###Help Links
 - https://github.com/appium/appium/blob/master/docs/en/advanced-concepts/hybrid.md
 - http://appium.io/slate/en/tutorial/android.html?ruby#getting-started-with-appium

@@ -21,6 +21,6 @@ export function getFormattedCurrentDateTime() {
   if (currentSeconds < 10) {
     currentSeconds = '0' + currentSeconds;
   }
-  const formattedDate = date.getFullYear() + "-" + month + "-" + todayDate + " " + currentHours + ":" + currentMinutes + ":" + currentSeconds;
+  const formattedDate = date.getFullYear() + '-' + month + '-' + todayDate + ' ' + currentHours + ':' + currentMinutes + ':' + currentSeconds;
   return formattedDate;
 }
