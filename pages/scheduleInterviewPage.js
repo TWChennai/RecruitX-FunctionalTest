@@ -18,45 +18,46 @@ export default class ScheduleInterviewPage extends BasePage {
   }
 
   resolveTextContent(elements) {
-    var text_promises = [];
-    for (var i = 0; i < elements.length; i++) {
-      text_promises.push(elements[i].text());
+    const textPromises = [];
+    for (let i = 0; i < elements.length; i++) {
+      textPromises.push(elements[i].text());
     }
-    return Promise.all(text_promises);
+    return Promise.all(textPromises);
   }
 
   scheduleInterview(element, intervalInDays, amPm, hours, minutes) {
-    var driver = this.switchToNativeAppDriver();
+    const driver = this.switchToNativeAppDriver();
     function clickOk() {
       return driver.elementById('android:id/button1').click();
     }
 
     function enterDate() {
-      var interviewDate = new Date();
-      interviewDate.setDate(interviewDate.getDate() + parseInt(intervalInDays));
-      var locale = 'en-us';
-      var month = interviewDate.toLocaleString(locale, { month: 'short' });
+      const interviewDate = new Date();
+      interviewDate.setDate(interviewDate.getDate() + parseInt(intervalInDays, 10));
+      const locale = 'en-us';
+      const month = interviewDate.toLocaleString(locale, { month: 'short' });
       return driver.elementById('android:id/month').setText(month)
-      .then(function () {
-        return driver.elementById('android:id/day').type(interviewDate.getDate());
+      .then(() => {
+        driver.elementById('android:id/day').type(interviewDate.getDate());
       })
-      .then(function () {
-        return driver.elementById('android:id/year').type(interviewDate.getFullYear());
+      .then(() => {
+        driver.elementById('android:id/year').type(interviewDate.getFullYear());
       })
       .then(clickOk);
     }
 
     function enterTime() {
-      var promises = [driver.elementById('android:id/hour').type(hours),
+      const promises = [driver.elementById('android:id/hour').type(hours),
       driver.elementById('android:id/minute').setText(minutes)];
       return Promise.all(promises)
-      .then(function () {
-        return driver.elementById('android:id/amPm').text();
+      .then(() => {
+        driver.elementById('android:id/amPm').text();
       })
-      .then(function (text) {
+      .then(text => {
         if (text !== amPm) {
           return driver.elementById('android:id/amPm').click();
         }
+        return Promise.resolve(text);
       })
       .then(clickOk);
     }
