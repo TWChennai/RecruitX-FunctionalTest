@@ -14,7 +14,7 @@ export default class ScheduleInterviewPage extends BasePage {
   }
 
   getInterviewRounds() {
-    return this.switchToWebViewDriver().elementsByCss('ion-content ion-list div ion-item div');
+    return this.switchToWebViewDriver().waitForElementsByCss('ion-content ion-list div ion-item div', this.asserters.isDisplayed, 10000, 1000);
   }
 
   resolveTextContent(elements) {
