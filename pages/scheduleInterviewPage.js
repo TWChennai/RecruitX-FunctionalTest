@@ -27,12 +27,14 @@ export default class ScheduleInterviewPage extends BasePage {
   }
 
   scheduleInterview(element, intervalInDays, amPm, hours, minutes) {
-    const driver = this.switchToNativeAppDriver();
+    const that = this;
     function clickOk() {
+      const driver = that.switchToNativeAppDriver();
       return driver.elementById('android:id/button1').click();
     }
 
     function enterDate() {
+      const driver = that.switchToNativeAppDriver();
       const interviewDate = new Date();
       interviewDate.setDate(interviewDate.getDate() + parseInt(intervalInDays, 10));
       const locale = 'en-us';
@@ -48,6 +50,7 @@ export default class ScheduleInterviewPage extends BasePage {
     }
 
     function enterTime() {
+      const driver = that.switchToNativeAppDriver();
       const promises = [driver.elementById('android:id/hour').type(hours),
       driver.elementById('android:id/minute').setText(minutes)];
       return Promise.all(promises)
