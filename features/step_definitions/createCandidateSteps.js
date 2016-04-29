@@ -11,6 +11,7 @@ export default steps()
       Hours: hours, Minutes: minutes }] = table.hashes();
 
     const elements = await this.ScheduleInterviewPage.getInterviewRounds();
+    console.log(elements);
     await this.ScheduleInterviewPage.scheduleInterview(
       elements[0], intervalInDays, amPm, hours, minutes);
   })
