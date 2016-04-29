@@ -8,7 +8,7 @@ Scenario: Verify recruiter is able to successfully create a dev candidate
   Then I should be on Add Candidate page
   When I enter the following candidate details
     | FirstName | LastName  | Role  | Experience  | Skills          |
-    | Candidate | One       | Dev   | 2.00        | Java, Python    |
+    | Candidate | One       | Dev   | 2.00        | Java            |
   When I click the next button
   Then I should be on Schedule Interview page
   When I schedule the following rounds
