@@ -30,7 +30,7 @@ export default class AddCandidatePage extends BasePage {
 
   selectSkills(skills) {
     const promise = new Promise((resolve, reject) => {
-      this.switchToWebViewDriver().elementsByCss('ion-list div.list > label')
+      this.switchToWebViewDriver().waitForElementsByCss('ion-list div.list > label', this.asserters.isDisplayed, 10000, 1000);
         .then(elements => {
           let textResolvedCounter = 0;
           const clickPromises = [];
