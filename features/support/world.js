@@ -5,6 +5,7 @@ import LoginPage from '../../pages/loginPage.js';
 import HomePage from '../../pages/homePage.js';
 import AddCandidatePage from '../../pages/addCandidatePage.js';
 import ScheduleInterviewPage from '../../pages/scheduleInterviewPage.js';
+import InterviewFeedbackPage from '../../pages/interviewFeedbackPage.js';
 import steps from 'artstep';
 
 export default function () {
@@ -20,5 +21,6 @@ export default function () {
     this.HomePage = new HomePage(this.driver, this.asserters);
     this.AddCandidatePage = new AddCandidatePage(this.driver, this.asserters);
     this.ScheduleInterviewPage = new ScheduleInterviewPage(this.driver, this.asserters);
+    this.InterviewFeedbackPage = new InterviewFeedbackPage(this.driver, this.asserters);
   };
 }

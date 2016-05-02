@@ -1,10 +1,10 @@
 export function getFormattedCurrentDateTime() {
   const date = new Date(Date.now());
-  let month = date.getMonth() + 1;
-  let todayDate = date.getDate();
-  let currentHours = date.getHours();
-  let currentMinutes = date.getMinutes();
-  let currentSeconds = date.getSeconds();
+  let month = date.getUTCMonth() + 1;
+  let todayDate = date.getUTCDate();
+  let currentHours = date.getUTCHours();
+  let currentMinutes = date.getUTCMinutes();
+  let currentSeconds = date.getUTCSeconds();
 
   if (month < 10) {
     month = `0${month}`;

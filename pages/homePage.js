@@ -32,4 +32,13 @@ export default class HomePage extends BasePage {
     waitForElementByCssSelector('.popup-body',
                   this.asserters.isDisplayed, 20000, 1000).text();
   }
+
+  clickMyInterviewsTabs() {
+    return this.switchToWebViewDriver().elementByLinkText('My Interviews').click();
+  }
+
+  clickFeedbackButton() {
+    return this.switchToWebViewDriver().waitForElementByCssSelector(
+      '.button[ng-click=\'$event.stopPropagation()\']', this.asserters.isDisplayed, 20000, 1000).click();
+  }
 }
