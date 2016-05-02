@@ -5,3 +5,6 @@ reports/
 *.log
 *.txt
 *.png
+
+# Project specific env variables
+.envrc
