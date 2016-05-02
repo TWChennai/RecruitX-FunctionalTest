@@ -1,7 +1,7 @@
 var dataSetupHooks = function () {
   this.Before('@clearInterviewPanelists', function (scenario) {
     var pg = require('pg');
-    var connectionString = process.env.db_connection_string;
+    var connectionString = process.env.DB_CONNECTION_STRING;
     pg.defaults.poolIdleTimeout = 600000;
 
     pg.connect(connectionString, function (err, client) {

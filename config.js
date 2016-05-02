@@ -1,6 +1,6 @@
 export default {
   QA: {
-    uri: process.env.qa_uri,
-    Authorization: process.env.qa_auth,
+    uri: process.env.QA_URI,
+    Authorization: process.env.QA_AUTH,
   },
 };
