@@ -2,6 +2,10 @@ import config from '../../config.js';
 import fetch from 'isomorphic-fetch';
 import * as util from '../helper.js';
 
+export function allowsSignupAndIsInPast(interview) {
+  return interview.signup_error === '';
+}
+
 class DataSetup {
   constructor() {
     this.env = config[process.env.ENV];
@@ -49,26 +53,26 @@ class DataSetup {
   async getInterviews(role, panelist) {
     const requestOptions = {
       method: 'GET',
-      headers: this.getHeaders()
+      headers: this.getHeaders(),
     };
 
     const signupInterviewURI = `${this.env.uri}/interviews?panelist_experience=10&panelist_login_name=${panelist}&panelist_role=${role}`;
     const response = await fetch(signupInterviewURI, requestOptions);
     const json = await response.json();
-    var filtered = json.filter(allowsSignupAndIsInPast);
+    const filtered = json.filter(allowsSignupAndIsInPast);
     return filtered[0].id;
   }
 
   async signupInterview(role, panelist) {
     await this.createCandidate(role);
-    var interview_id = await this.getInterviews(role, panelist);
+    const interviewId = await this.getInterviews(role, panelist);
     const jsonBody = JSON.stringify({
-      'interview_panelist': {
-        'panelist_login_name': panelist,
-        'interview_id': interview_id,
-        'panelist_role': role,
-        'panelist_experience': 10
-      }
+      interview_panelist: {
+        panelist_login_name: panelist,
+        interview_id: interviewId,
+        panelist_role: role,
+        panelist_experience: 10,
+      },
     });
 
     const requestOptions = {
@@ -80,12 +84,7 @@ class DataSetup {
     const signupInterviewURI = `${this.env.uri}/panelists`;
     const response = await fetch(signupInterviewURI, requestOptions);
     return response;
-
   }
-}
-
-export function allowsSignupAndIsInPast(interview) {
-  return interview.signup_error === '';
 }
 
 export default new DataSetup();

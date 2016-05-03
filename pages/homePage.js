@@ -39,6 +39,7 @@ export default class HomePage extends BasePage {
 
   clickFeedbackButton() {
     return this.switchToWebViewDriver().waitForElementByCssSelector(
-      '.button[ng-click=\'$event.stopPropagation()\']', this.asserters.isDisplayed, 20000, 1000).click();
+      '.button[ng-click=\'$event.stopPropagation()\']',
+      this.asserters.isDisplayed, 20000, 1000).click();
   }
 }

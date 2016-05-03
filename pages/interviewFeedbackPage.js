@@ -7,7 +7,8 @@ export default class InterviewFaadbackPage extends BasePage {
   }
 
   clickPursueLink() {
-    return this.switchToWebViewDriver().waitForElementByLinkText('Pursue', this.asserters.isDisplayed, 20000, 1000).click();
+    return this.switchToWebViewDriver().waitForElementByLinkText(
+      'Pursue', this.asserters.isDisplayed, 20000, 1000).click();
     // .elementByLinkText('Pursue').click();
   }
 
@@ -16,17 +17,20 @@ export default class InterviewFaadbackPage extends BasePage {
   }
 
   async captureCameraImage() {
-    var driver = this.switchToNativeAppDriver();
-    var that = this;
+    const driver = this.switchToNativeAppDriver();
     await driver.pressDeviceKey(27);
-    // return driver.waitForElementById('com.android.gallery3d:id/btn_done', that.asserters.isDisplayed, 30000, 1000).click();
+    // return driver.waitForElementById(
+    // 'com.android.gallery3d:id/btn_done', that.asserters.isDisplayed, 30000, 1000).click();
     // Specifc to android Emulator
-    return driver.waitForElementById('com.android.camera:id/btn_done', that.asserters.isDisplayed, 30000, 1000).click();
+    return driver.waitForElementById(
+      'com.android.camera:id/btn_done', this.asserters.isDisplayed, 30000, 1000).click();
   }
 
   clickSubmitButton() {
     return this.switchToWebViewDriver()
-               .waitForElementByCss('button[ng-click=\'saveFeedback()\']', this.asserters.isDisplayed, 10000, 1000).click();
+               .waitForElementByCss(
+                 'button[ng-click=\'saveFeedback()\']',
+                 this.asserters.isDisplayed, 10000, 1000).click();
   }
 
   async clickConfirm() {
@@ -35,10 +39,9 @@ export default class InterviewFaadbackPage extends BasePage {
     return buttons[1].click();
   }
 
-  getConfirmationMessage(err, response) {
+  getConfirmationMessage() {
     return this.switchToWebViewDriver().
     waitForElementByCssSelector('.popup-body',
                   this.asserters.isDisplayed, 20000, 1000).text();
   }
-
 }

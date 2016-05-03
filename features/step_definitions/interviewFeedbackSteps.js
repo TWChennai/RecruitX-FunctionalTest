@@ -13,7 +13,7 @@ export default steps()
 
   .When('I capture feedback image in camera', async function() {
     await this.InterviewFeedbackPage.clickCameraIcon();
-    const elements = await this.InterviewFeedbackPage.captureCameraImage();
+    await this.InterviewFeedbackPage.captureCameraImage();
   })
 
   .When('I click on Feedback button', async function() {

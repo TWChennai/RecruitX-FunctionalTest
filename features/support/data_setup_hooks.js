@@ -1,10 +1,10 @@
-var dataSetupHooks = function () {
-  this.Before('@clearInterviewPanelists', function (scenario) {
-    var pg = require('pg');
-    var connectionString = process.env.DB_CONNECTION_STRING;
+export default function () {
+  this.Before('@clearInterviewPanelists', () => {
+    const pg = require('pg');
+    const connectionString = process.env.DB_CONNECTION_STRING;
     pg.defaults.poolIdleTimeout = 600000;
 
-    pg.connect(connectionString, function (err, client) {
+    pg.connect(connectionString, (err, client) => {
       if (err) throw err;
 
       client
@@ -15,6 +15,4 @@ var dataSetupHooks = function () {
       .query('DELETE from candidates;');
     });
   });
-};
-
-module.exports = dataSetupHooks;
+}
