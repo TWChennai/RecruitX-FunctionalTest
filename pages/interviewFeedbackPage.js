@@ -32,16 +32,4 @@ export default class InterviewFaadbackPage extends BasePage {
                  'button[ng-click=\'saveFeedback()\']',
                  this.asserters.isDisplayed, 10000, 1000).click();
   }
-
-  async clickConfirm() {
-    const buttons = await this.switchToWebViewDriver().
-    waitForElementsByCssSelector('.button.ng-binding.button-positive');
-    return buttons[1].click();
-  }
-
-  getConfirmationMessage() {
-    return this.switchToWebViewDriver().
-    waitForElementByCssSelector('.popup-body',
-                  this.asserters.isDisplayed, 20000, 1000).text();
-  }
 }

@@ -27,12 +27,6 @@ export default class HomePage extends BasePage {
     return buttons[1].click();
   }
 
-  getConfirmationMessage() {
-    return this.switchToWebViewDriver().
-    waitForElementByCssSelector('.popup-body',
-                  this.asserters.isDisplayed, 20000, 1000).text();
-  }
-
   clickMyInterviewsTabs() {
     return this.switchToWebViewDriver().elementByLinkText('My Interviews').click();
   }

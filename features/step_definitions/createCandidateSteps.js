@@ -7,12 +7,7 @@ export default steps()
   })
 
   .When(/^I schedule the following rounds$/, async function(table) {
-    const [{ IntervalInDays: intervalInDays, amPm: amPm,
-      Hours: hours, Minutes: minutes }] = table.hashes();
-
-    const elements = await this.ScheduleInterviewPage.getInterviewRounds();
-    await this.ScheduleInterviewPage.scheduleInterview(
-      elements[0], intervalInDays, amPm, hours, minutes);
+    await this.ScheduleInterviewPage.scheduleInterviews(table.hashes());
   })
 
   .When(/^I enter the following candidate details$/, async function(table) {
@@ -29,6 +24,14 @@ export default steps()
     await this.AddCandidatePage.clickNext();
   })
 
+  .When('I save the schedule', async function() {
+    await this.ScheduleInterviewPage.save();
+  })
+
+  .When('I click ok', async function() {
+    await this.ScheduleInterviewPage.clickOk();
+  })
+
   .Then('I should be on Add Candidate page', async function() {
     await this.AddCandidatePage.waitForAddCandidatePageToLoad();
     const actualTitle = await this.AddCandidatePage.getTitle();
@@ -39,4 +42,13 @@ export default steps()
     await this.ScheduleInterviewPage.waitToLoad();
     const actualTitle = await this.ScheduleInterviewPage.getTitle();
     actualTitle.should.equal('Schedule Interview');
+  })
+
+  .Then('I should see a success message', async function() {
+    const actualTitle = await this.ScheduleInterviewPage.getConfirmationMessage();
+    actualTitle.should.equal('Candidate Interview successfully added!!');
+  })
+
+  .Then('I should be on home page', async function() {
+    await this.HomePage.waitForHomePageToLoad();
   });

@@ -13,6 +13,11 @@ export default class ScheduleInterviewPage extends BasePage {
               this.asserters.isDisplayed, 20000, 1000);
   }
 
+  save() {
+    return this.switchToWebViewDriver().elementByCss(
+      'div.row div button[ng-click=\'postCandidate()\']').click();
+  }
+
   getInterviewRounds() {
     return this.switchToWebViewDriver().waitForElementsByCss(
       'ion-content ion-list div ion-item div', this.asserters.isDisplayed, 10000, 1000);
@@ -26,11 +31,24 @@ export default class ScheduleInterviewPage extends BasePage {
     return Promise.all(textPromises);
   }
 
+  async scheduleInterviews(schedules) {
+    const elements = await this.getInterviewRounds();
+    const contents = await this.resolveTextContent(elements);
+    for (let i = 0; i < schedules.length; i++) {
+      const { InterviewRound: interviewRound, IntervalInDays: intervalInDays, amPm: amPm,
+        Hours: hours, Minutes: minutes } = schedules[i];
+
+      const index = contents.findIndex(content => content === interviewRound);
+      if (index !== -1) {
+        await this.scheduleInterview(elements[index], intervalInDays, amPm, hours, minutes);
+      }
+    }
+  }
+
   scheduleInterview(element, intervalInDays, amPm, hours, minutes) {
     const that = this;
     function clickOk() {
-      const driver = that.switchToNativeAppDriver();
-      return driver.elementById('android:id/button1').click();
+      return that.switchToNativeAppDriver().elementById('android:id/button1').click();
     }
 
     function enterDate() {
@@ -43,9 +61,10 @@ export default class ScheduleInterviewPage extends BasePage {
       .then(() => {
         driver.elementById('android:id/day').type(interviewDate.getDate());
       })
-      .then(() => {
-        driver.elementById('android:id/year').type(interviewDate.getFullYear());
-      })
+      // .then(() => {
+      //   driver
+      //   .elementById('android:id/year').type(interviewDate.getFullYear());
+      // })
       .then(clickOk);
     }
 
@@ -66,7 +85,8 @@ export default class ScheduleInterviewPage extends BasePage {
       .then(clickOk);
     }
 
-    return element
+    return this.switchToWebViewDriver()
+    .then(() => element)
     .click()
     .then(enterDate)
     .then(enterTime);

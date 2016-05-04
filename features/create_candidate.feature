@@ -1,5 +1,6 @@
 Feature: As a recruiter, I want to create candidates so that panelists can sign up
 
+@clearInterviewPanelists
 Scenario: Verify recruiter is able to successfully create a dev candidate
   Given I open the recruitx app and land on login page
   When I signin with credentials rrecruitx and P@ssw0rd
@@ -13,4 +14,9 @@ Scenario: Verify recruiter is able to successfully create a dev candidate
   Then I should be on Schedule Interview page
   When I schedule the following rounds
     | InterviewRound | IntervalInDays | Hours | Minutes | amPm |
-    | Coding         | 12             | 07    | 00      | AM   |
+    | Coding         | 2              | 07    | 00      | pm   |
+    | Tech-1         | 3              | 07    | 00      | AM   |
+  And I save the schedule
+  Then I should see a success message
+  When I click ok
+  Then I should be on home page
