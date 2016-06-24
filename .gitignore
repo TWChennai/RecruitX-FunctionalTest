@@ -8,3 +8,6 @@ reports/
 
 # Project specific env variables
 .envrc
+
+.idea/
+*.iml
