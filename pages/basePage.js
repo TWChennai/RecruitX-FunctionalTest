@@ -12,7 +12,9 @@ export default class BasePage {
   }
 
   getTitle() {
-    return this.switchToWebViewDriver().elementByCss('div[nav-bar=\'active\'] .title').text();
+    return this.switchToWebViewDriver().
+        waitForElementByCssSelector('div[nav-bar=\'active\'] .title',
+                      this.asserters.isDisplayed, 20000, 1000).text();
   }
 
   getConfirmationMessage() {
